@@ -45,7 +45,7 @@
                         <div class="col-sm-4 col-12">
 
                             <div class="form-group">
-                                <a href="<?=route('persons.excel',request()->all());?>" class="btn btn-xs btn-outline-dark w-100 mb-2">drukuj exlec</a>
+                                <a href="<?=route('persons.excel',request()->all());?>" class="btn btn-xs btn-outline-dark w-100 mb-2">drukuj excel</a>
                                 <button type="sumbit" class="btn btn-xs btn-primary w-100">szukaj</button>
                             </div>
                         </div>
