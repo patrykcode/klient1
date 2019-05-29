@@ -126,7 +126,7 @@
     <body>
         @include('cms::includes.alerts')
 
-        <section class="container-fluid p-0 position-relative section1" style="background-image:url('<?= url($article1->img ?? ''); ?>');"> 
+        <section class="container-fluid p-0 position-relative section1" style="background-image:url('<?= cimage($article1->img ?? ''); ?>');"> 
 
             <div class="fly-text" id="content">
 
