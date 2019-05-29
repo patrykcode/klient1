@@ -61,7 +61,7 @@
                                 <tr>
                                     <th width="30px">#</th>
                                     <th scope="col">Nazwa</th>
-                                    <th scope="col">Email</th>
+                                    <th scope="col">Zawód</th>
                                     <th scope="col">telefon</th>
                                     <th scope="col">kraj poch.</th>
                                     <th class="text-right" scope="col">opcje</th>
@@ -78,7 +78,7 @@
                                                 <?= $row->name ?? 'brak'; ?>
                                             </td>
                                             <td>
-                                                <?= $row->email ?? 'brak'; ?>
+                                                <?= $row->qualifications ?? 'brak'; ?>
                                             </td>
                                             <td>
 
