@@ -31,11 +31,11 @@ class PersonsController extends AdminController {
         $this->title = 'Lista zgłoszeń';
         $rows = persons()->paginate();
 
-        $filename = 'lista_zglosen'.time().'.csv';
-        $file = storage_path('/app/'.$filename);
-
+        $filename = 'lista_zglosen' . time() . '.csv';
+        $file = storage_path('/app/' . $filename);
+        echo "\xEF\xBB\xBF";
         $fp = fopen($file, 'w');
-        
+
         fputcsv($fp, [
             'ID',
             'Imie i nazwisko',
@@ -50,17 +50,17 @@ class PersonsController extends AdminController {
             'Komentarz',
             'Data dodania',
             'Data edycji'
-        ],';');
-        
+                ], ';');
+
         foreach ($rows as $fields) {
-            fputcsv($fp, $fields->toArray(),';');
+            fputcsv($fp, $fields->toArray(), ';');
         }
 
         fclose($fp);
 
         header('Content-Encoding: UTF-8');
         header('Content-type: text/csv; charset=UTF-8');
-        header('Content-Disposition: attachment; filename="'.$filename.'"');
+        header('Content-Disposition: attachment; filename="' . $filename . '"');
 
         return \Storage::get($filename);
     }
