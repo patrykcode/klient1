@@ -156,7 +156,7 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="" >Imię i nazwisko <span class="text-danger">*</span></label>
-                                                    <input type="text" name="name" pattern="[A-Za-z\s]{,50}"  value="<?=old('name')??'';?>"  class="form-control" required>
+                                                    <input type="text" name="name" pattern="[A-Za-z\s]{2,50}"  value="<?=old('name')??'';?>"  class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -225,7 +225,7 @@
                                         </div>
                                         <div class="form-group">
                                             <label for="agree">
-                                                <input type="checkbox" id="agree" require> 
+                                                <input type="checkbox" id="agree" required> 
                                                 Wyrażam zgodę na przetwarzanie moich danych osobowych przez 3M Inwestycje w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.
                                                 <span class="text-danger">*</span>
                                             </label>
