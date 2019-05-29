@@ -61,6 +61,13 @@ if (!function_exists('roles')) {
     }
 
 }
+if (!function_exists('persons')) {
+
+    function persons() {
+        return \Cms\Persons\Repositories\PersonsRepo::getInstance(new \Cms\Persons\Models\Persons());
+    }
+
+}
 
 if (!function_exists('files')) {
 
@@ -134,6 +141,10 @@ function getImage($fileName, $fileSize = [], $disc = 'public') {
 
         return url($fileCropStoreage) . '?' . time();
     }
+}
+
+function cimage($img){
+    return url(str_replace('.', '_crop.', $img));
 }
 
 function cropJavaScript($settings = []) {

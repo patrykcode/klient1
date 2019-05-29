@@ -38,9 +38,8 @@
             "App\\": "app/",
             "Cms\\Core\\": "modules/coreCms/src/",
             "Cms\\Roles\\": "modules/roleCms/src/",
-            "Cms\\Articles\\": "modules/articleCms/src/",
-            "Cms\\Galleries\\": "modules/galleriesCms/src/",
-            "Cms\\News\\": "modules/newsCms/src/"
+            "Cms\\Articles\\": "modules/articlesCms/src/",
+            "Cms\\Persons\\": "modules/personsCms/src/"
         },
         "classmap": [
             "database/seeds",

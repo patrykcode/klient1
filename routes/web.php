@@ -10,13 +10,7 @@
   | contains the "web" middleware group. Now create something great!
   |
  */
-
-Route::get('/', function() {
-    return view('cms::index')->render();
-})->name('dashboard');
-
-Route::get('/settings', function() {})->name('settings')->middleware('can:settings.create');
-
-
-Route::get('/login', 'testController@login')->name('login');
-
+Route::group(['middleware' => ['web']], function () {
+    Route::get('/', '\Cms\Articles\Http\Controllers\FrontController@index')->name('index');
+    Route::post('/send', '\Cms\Articles\Http\Controllers\FrontController@update');
+});

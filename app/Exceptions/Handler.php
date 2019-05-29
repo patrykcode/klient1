@@ -47,7 +47,7 @@ class Handler extends ExceptionHandler {
      */
     public function render($request, Exception $exception) {
 
-        dd($exception);
+       
         if ($exception instanceof AuthorizationException) {
             return app('redirect')->route(config('rolecms.default_route'))->withErrors(['Nie masz uprawnien do tego modułu!']);
         }

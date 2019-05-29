@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Praca ukraina'),
 
     /*
     |--------------------------------------------------------------------------
@@ -181,8 +181,7 @@ return [
         Cms\Roles\RolesProvider::class,
         //CMS modules
         Cms\Articles\Provider::class,
-        Cms\Galleries\Provider::class,
-        Cms\News\Provider::class,
+        Cms\Persons\Provider::class,
     ],
 
     /*
