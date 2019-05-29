@@ -19,10 +19,10 @@ class UserRepo extends \Cms\Core\Repositories\Repository {
             $row = $this->model->create($param);
             if ($row) {
                 $row->haslo = $param['haslo'];
-//                \Mail::send('email.register', $row->toarray(), function($message) use($row) {
-//                    $message->subject('Rejestracja konta');
-//                    $message->to($row->email);
-//                });
+                \Mail::send('email.register', $row->toarray(), function($message) use($row) {
+                    $message->subject('Rejestracja konta');
+                    $message->to($row->email);
+                });
             }
 
             return $row;
@@ -90,10 +90,10 @@ class UserRepo extends \Cms\Core\Repositories\Repository {
                 $user->save();
 
                 $user->haslo = $pass;
-//                \Mail::send('email.register', $user->toarray(), function($message) use($user) {
-//                    $message->subject('Nowe hasło - resetowanie');
-//                    $message->to($user->email);
-//                });
+                \Mail::send('email.register', $user->toarray(), function($message) use($user) {
+                    $message->subject('Nowe hasło - resetowanie');
+                    $message->to($user->email);
+                });
             }
             \DB::commit();
             return $user;
