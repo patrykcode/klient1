@@ -6,7 +6,7 @@
         <title>Ukraine praca</title>
         <script src="{{asset('admin/js/alerts.js')}}"></script>
         <link type="text/css" rel="stylesheet" href="{{asset('admin/css/alerts.css')}}">
-        <link type="text/css" rel="stylesheet" href="{{asset('admin/fs470/css/font-awesome.min')}}">
+        <link type="text/css" rel="stylesheet" href="{{asset('admin/fs470/css/font-awesome.min.css')}}">
         <link rel="stylesheet" href="/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
