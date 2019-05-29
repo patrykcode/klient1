@@ -1,0 +1,31 @@
+{
+    "name": "patryk/rolecms",
+    "type": "project",
+    "description": "User role and abilities.",
+    "keywords": [
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Patryk Pawlicki",
+            "email": "krspawlicki@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2"
+    },
+    "require-dev": {
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RoleCms\\RoleCmsServiceProvider"
+            ]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "RoleCms\\": "src/"
+        }
+    }
+}
