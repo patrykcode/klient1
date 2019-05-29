@@ -37,7 +37,7 @@ class UsersController extends Controller {
     }
 
     public function delete($id) {
-
+        
         if (user()->delete($id)) {
             $this->success[] = 'Usunieto użytkownika';
         } else {
@@ -61,7 +61,8 @@ class UsersController extends Controller {
     public function update(\Illuminate\Http\Request $request) {
         $errors = [];
         $success = [];
-        if (user()->update($request)) {
+
+        if (user()->update($request->input('id'),$request)) {
             $success[] = 'Zapisano nowe ustawienia!';
         } else {
             $errors[] = 'Coś poszło nie tak';

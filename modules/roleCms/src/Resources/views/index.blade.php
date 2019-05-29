@@ -16,10 +16,10 @@
                     <label>Podaj email</label>
                     <?= Form::email('email', old('email'), ['class' => 'form-control', 'required' => 'required']); ?>
                 </div>
-                <?php if (session()->has('new_user')): ?>
+                <?php if (isset($new_user)): ?>
                     <div class="form-group alert alert-success">
-                        email: <?= session('new_user')->email; ?></br>
-                        hasło: <?= session('new_user')->haslo; ?>
+                        email: <?= $new_user->email??''; ?></br>
+                        hasło: <?= $new_user->haslo??''; ?>
                     </div>
                 <?php endif; ?>
 

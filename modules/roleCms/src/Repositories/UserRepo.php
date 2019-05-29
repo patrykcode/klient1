@@ -12,8 +12,8 @@ class UserRepo extends \Cms\Core\Repositories\Repository {
 
     public function create($request) {
         $param = $request->all();
-
         try {
+
             $param['haslo'] = str_random(8);
             $param['password'] = \Hash::make($param['haslo']);
             $row = $this->model->create($param);
@@ -103,6 +103,16 @@ class UserRepo extends \Cms\Core\Repositories\Repository {
             \DB::rollback();
         }
         return false;
+    }
+
+    public function delete($id) {
+        try {
+            if ($row = $this->model->find($id)) {
+                return $row->delete();
+            }
+        } catch (\Exception $e) {
+            return false;
+        }
     }
 
 }
