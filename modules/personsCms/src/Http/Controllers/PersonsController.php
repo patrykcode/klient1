@@ -26,4 +26,38 @@ class PersonsController extends AdminController {
         return view($this->path . 'index', compact('rows', 'countries', 'qualifications'));
     }
 
+    public function excel() {
+
+        $this->title = 'Lista zgłoszeń';
+        $rows = persons()->paginate();
+
+        $file = storage_path('file.csv');
+
+        $fp = fopen($file, 'w');
+        
+        fputcsv($fp, [
+            'ID',
+            'Imie i nazwisko',
+            'Data urodzenia',
+            'Kwalifikacje',
+            'Umiejętności',
+            'Języki',
+            'Oczekiwania finansowe',
+            'Gotowośc do pracy',
+            'Telefon',
+            'Kraj pochodzenia',
+            'Komentarz',
+            'Data dodania',
+            'Data edycji'
+        ],';');
+        
+        foreach ($rows as $fields) {
+            fputcsv($fp, $fields->toArray(),';');
+        }
+
+        fclose($fp);
+
+        dd('tu');
+    }
+
 }

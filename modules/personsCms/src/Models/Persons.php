@@ -2,9 +2,8 @@
 
 namespace Cms\Persons\Models;
 
-use Illuminate\Database\Eloquent\Model;
 
-class Persons extends Model {
+class Persons extends \Cms\Core\Models\CoreModel {
 
     protected $fillable = ['id', 'name', 'bdate', 'qualifications', 'skills', 'langs', 'paymants', 'sdate', 'phone', 'country', 'comments'];
     protected $table = 'persons';

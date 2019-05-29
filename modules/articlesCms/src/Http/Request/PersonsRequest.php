@@ -14,7 +14,7 @@ class PersonsRequest extends \Illuminate\Foundation\Http\FormRequest {
 
     public function rules() {
         return [
-            "phone" => "required|numeric|min:9|max:11",
+            "phone" => "required|numeric|regex:/[0-9]{9,11}/",
             "name" => "required",
             "country" => "required",
             "bdate" => "required|date",

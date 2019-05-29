@@ -2,9 +2,7 @@
 
 namespace Cms\Articles\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Articles extends Model {
+class Articles extends \Cms\Core\Models\CoreModel {
 
     protected $fillable = ['id', 'parent_id', 'img', 'imgbox', 'img_typ', 'classes', 'modules', 'menu_top', 'menu_bottom', 'menu_box', 'contact_form', 'user_id', 'pub', 'order'];
     protected $table = 'articles';

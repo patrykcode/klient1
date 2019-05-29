@@ -19,13 +19,14 @@ class Repository extends AbstractRepository {
     public function paginate($paginate = 15) {
 
         $query = $this->model;
-
-        foreach (request()->all() as $column => $value) {
-            if ($value != '--wybierz--') {
-                $query = $query->where($column, $value);
+        
+        if ($columns = request()->only($query->getFillable())) {
+            foreach ($columns as $column => $value) {
+                if ($value != '--wybierz--') {
+                    $query = $query->where($column, $value);
+                }
             }
         }
-
 
         return $query->paginate($paginate);
     }

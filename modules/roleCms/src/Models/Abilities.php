@@ -2,9 +2,7 @@
 
 namespace Cms\Roles\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Abilities extends Model {
+class Abilities extends \Cms\Core\Models\CoreModel {
 
     protected $fillable = ['id', 'roles_id', 'modules','action'];
     protected $table = 'abilities';
