@@ -15,6 +15,7 @@
                 font-family: 'Montserrat', sans-serif;
                 max-width: 1920px;
                 margin: auto;
+                overflow-x:hidden;
             }
             h1{
 
@@ -39,11 +40,10 @@
             .fly-text{
                 position: absolute;
                 top:10%;
-                padding-left:5%;
+                padding:30px 5%;
             }
             .box-form{
                 border-radius:3px;
-                margin-right:5%;
             }
             .form-h2{
                 font-size: 2em;
@@ -128,7 +128,7 @@
 
         <section class="container-fluid p-0 position-relative section1" style="background-image:url('<?= url($article1->img ?? ''); ?>');"> 
 
-            <div class="fly-text">
+            <div class="fly-text" id="content">
 
                 <div class="row">
                     <div class="col-lx-7  col-lg-6 col-md-12">
@@ -274,22 +274,19 @@
         </section>
 
         <footer class="container-fluid bg-black text-white py-5 text-footer">
-            <div class="container">
+           
                 <div class="row justify-content-between">
                     <div class="col-lg-4 col-md-6">
                         <h3 class="footer-h3">3M Inwestycje</h3>
+                        <p class="text-muted">3M Inwestycje &copy; <span><?= date('Y'); ?></span> · All Rights Reserved</p>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="col-lg-8 col-md-6">
                         <?= $article2->descLang->addmission ?? ''; ?>
                     </div>
                     <div class="col-lg-12 text-center">
-                        <p class="text-muted">3M Inwestycje &copy; <span><?= date('Y'); ?></span> · All Rights Reserved</p>
+                        
                     </div>
                 </div>
-
-
-            </div>
-
         </footer>
         <script src="/js/javascript.js"></script>
     </body>
