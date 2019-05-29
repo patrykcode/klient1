@@ -31,7 +31,8 @@ class PersonsController extends AdminController {
         $this->title = 'Lista zgłoszeń';
         $rows = persons()->paginate();
 
-        $file = storage_path('file.csv');
+        $filename = 'lista_zglosen'.time().'.csv';
+        $file = storage_path('/app/'.$filename);
 
         $fp = fopen($file, 'w');
         
@@ -57,7 +58,13 @@ class PersonsController extends AdminController {
 
         fclose($fp);
 
-        dd('tu');
+        header('Content-Disposition: attachment; filename="'.$filename.'"');
+        header("Content-Type:   application/vnd.ms-excel; charset=utf-8");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("Cache-Control: private", false);
+
+        return \Storage::get($filename);
     }
 
 }

@@ -6,6 +6,7 @@
         <title>Ukraine praca</title>
         <script src="{{asset('admin/js/alerts.js')}}"></script>
         <link type="text/css" rel="stylesheet" href="{{asset('admin/css/alerts.css')}}">
+        <link type="text/css" rel="stylesheet" href="{{asset('admin/fs470/css/font-awesome.min')}}">
         <link rel="stylesheet" href="/css/style.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
@@ -149,13 +150,13 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Nr. telefonu <span class="text-danger">*</span></label>
-                                                    <input type="text" name="phone" pattern="[0-9]{9,11}" value="<?=old('phone')??'';?>" class="form-control" >
+                                                    <input type="text" name="phone" pattern="[0-9]{9,11}" value="<?=old('phone')??'';?>" class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="" >Imię i nazwisko <span class="text-danger">*</span></label>
-                                                    <input type="text" name="name" pattern="[A-Za-z\s]{,50}"  value="<?=old('name')??'';?>"  class="form-control" >
+                                                    <input type="text" name="name" pattern="[A-Za-z\s]{,50}"  value="<?=old('name')??'';?>"  class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -163,7 +164,7 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Nardowość <span class="text-danger">*</span></label>
-                                                    <select class="form-control" name="country" >
+                                                    <select class="form-control" name="country" required>
                                                         <option value="Białoruś">Białoruś</option>
                                                         <option value="Polska">Polska</option>
                                                         <option value="Rosja">Rosja</option>
@@ -175,7 +176,7 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Data urodzenia <span class="text-danger">*</span></label>
-                                                    <input type="date" name="bdate" class="form-control" value="<?=old('bdate')??'';?>"   >
+                                                    <input type="date" name="bdate" class="form-control" value="<?=old('bdate')??'';?>"  required >
                                                 </div>
                                             </div>
                                         </div>
@@ -183,13 +184,13 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Kwalifikacje/zawód <span class="text-danger">*</span></label>
-                                                    <input type="text" name="qualifications" value="<?=old('qualifications')??'';?>"  class="form-control" >
+                                                    <input type="text" name="qualifications" value="<?=old('qualifications')??'';?>"  class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Umiejętności manualne <span class="text-danger">*</span></label>
-                                                    <input type="text" name="skills" value="<?=old('skills')??'';?>" class="form-control">
+                                                    <input type="text" name="skills" value="<?=old('skills')??'';?>" class="form-control" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -198,13 +199,13 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Języki <span class="text-danger">*</span></label>
-                                                    <input type="text" name="langs" value="<?=old('langs')??'';?>"  class="form-control" >
+                                                    <input type="text" name="langs" value="<?=old('langs')??'';?>"  class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Zarobki - oczekiwania finansowe <span class="text-danger">*</span></label>
-                                                    <input type="number" value="<?=old('payments')??'';?>" class="form-control" name="paymants" >
+                                                    <input type="number" value="<?=old('payments')??'';?>" class="form-control" name="paymants" required>
                                                 </div>
                                             </div>
                                         </div>
@@ -212,7 +213,7 @@
                                             <div class="col-lg-6 col-md">
                                                 <div class="form-group">
                                                     <label for="">Gotowość do pracy</label>
-                                                    <input type="date" name="sdate" value="<?=old('sdate')??'';?>" class="form-control" >
+                                                    <input type="date" name="sdate" value="<?=old('sdate')??'';?>" class="form-control" required>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6 col-md">

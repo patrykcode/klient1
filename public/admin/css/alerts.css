@@ -8,6 +8,7 @@ and open the template in the editor.
     Author     : Patryk
 */
 .alerts {
+    padding: 15px;
     border-radius: 0px;
     position: fixed;
     top: 10px;
